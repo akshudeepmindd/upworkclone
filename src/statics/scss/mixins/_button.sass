@@ -1,0 +1,60 @@
+@mixin SocialButton($social: "facebook")
+  padding: .3rem 1rem
+  cursor: pointer
+  border-radius: .5rem
+  @if $social == "facebook"       
+    border: none
+    color: map-get($fontColor, 'white')
+    background: map-get($fontColor, 'fb')
+    &:hover
+        border: 1px solid map-get($fontColor, 'fb')
+        background: map-get($fontColor, 'white')
+        color: map-get($fontColor, 'fb')
+  @else 
+    border: none
+    color: map-get($fontColor, 'white')
+    background: map-get($fontColor, 'google')
+    padding: .3rem 1.5rem
+    &:hover
+        border: 1px solid map-get($fontColor, 'google')
+        background: map-get($fontColor, 'white')
+        color: map-get($fontColor, 'google')
+
+
+@mixin button($type:'normal')
+    background-color: map-get($fontColor, 'orange')
+    color: map-get($fontColor, 'white')
+    border: none
+    border-radius: .5rem
+    transition: 0.3s
+    &:hover
+        cursor: pointer
+        background: map-get($fontColor, 'white')
+        color: map-get($fontColor, 'black')
+        border: .1rem solid map-get($fontColor, 'orange')
+        border-width: thin
+        transition: 0.3s
+    &:focus
+        outline: none
+    @if $type == 'renting'
+        padding: .5rem 2rem
+    @if $type == 'normal'     
+        padding: .5rem 5rem
+        &:focus
+            outline: none
+    @if $type == 'disabled'
+        background-color: map-get($fontColor, 'orange')
+        color: map-get($fontColor, 'white')
+        border: none
+        padding: .5rem 5rem
+        border-radius: .5rem
+        &:disabled
+            cursor: not-allowed
+            background-color: map-get($fontColor, 'grey')
+        &:hover
+            cursor: not-allowed
+            background: map-get($fontColor, 'grey')
+            color: map-get($fontColor, 'white')
+            border: none
+            border-width: thin
+        

@@ -1,0 +1,59 @@
+@import "variable.sass"
+@import '~semantic-ui-css/semantic.min.css'
+@import "./partials/_sidenav"
+@import "./partials/_dashboard"
+@import "./partials/_submitproposal"
+
+@import "./partials/_nav"
+@import "./partials/_landing"
+@import "./partials/_profile"
+@import "./partials/_footer"
+@import "./partials/_job"
+@import "./partials/_contracts"
+
+
+
+@import "~slick-carousel/slick/slick.css"
+@import "~slick-carousel/slick/slick-theme.css"
+*
+    font-family: 'Poppins', sans-serif
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    margin: 0
+
+.redToast
+    background: map-get($fontColor, 'toastRed')
+
+.greenToast
+    background: map-get($fontColor, 'green')
+
+.footer-contianer
+    margin-top: 2rem
+    background: map-get($fontColor,'orange')
+.first-section
+    padding-top: 1rem
+    img
+        height: 65px
+        max-width: 234px
+    p
+        color: map-get($fontColor,'white')
+        font-size: map-get($size,'one' )
+        padding-top: 1rem
+    ul
+        list-style: none
+        li
+            padding-top: 1rem
+            a
+                color: map-get($fontColor,'white')
+        h5
+            font-weight: 900
+            color: map-get($fontColor,'white')
+// .container__footer
+//     // margin: 0 !important
+body
+    overflow-x: hidden
+    background: #f2f3f4
